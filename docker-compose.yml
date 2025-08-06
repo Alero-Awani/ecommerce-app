@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=online-shopping
+    ports:
+      - "5428:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+
+  # ecommerce:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "9000:9000"
+  #   env_file:
+  #     - .env
+
+volumes:
+  db:
+    driver: local
+networks:
+  go-network:
+    driver: bridge
