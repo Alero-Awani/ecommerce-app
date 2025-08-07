@@ -1,6 +1,6 @@
 # Ecommerce Golang Typescript Application
 
-This project showcases an ecommerce website built using Typescript and Golang.
+A full-stack eCommerce platform built with a Golang backend and a TypeScript-based frontend. This project features a modular architecture, RESTful APIs, user authentication, product and order management, and seamless cart functionality.
 
 ## Table of Contents
 
@@ -87,14 +87,14 @@ Now you can access the application at `http://localhost:3000`.
 
 ### Build and Run Golang Dockerfile
 
-Build and Tag the Backend Docker Image
+1. Build and Tag the Backend Docker Image
 
-```sh
-docker build -t golang-backend:0.1.0 .
-```
+    ```sh
+    docker build -t golang-backend:0.1.0 .
+    ```
 
-Start the Docker Container
+1. Start the Docker Container
 
-```sh
-docker run -p 9000:9000 golang-backend:0.1.0 
-```
+    ```sh
+    docker run -p 9000:9000 golang-backend:0.1.0 
+    ```
