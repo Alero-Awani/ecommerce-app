@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"Region-Simulator/internal/api/rest"
-	"Region-Simulator/internal/dto"
-	"Region-Simulator/internal/repository"
-	"Region-Simulator/internal/service"
+	"ecommerce-app/internal/api/rest"
+	"ecommerce-app/internal/dto"
+	"ecommerce-app/internal/repository"
+	"ecommerce-app/internal/service"
 	"log"
 	"net/http"
 	"strconv"

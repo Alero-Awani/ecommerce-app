@@ -1,11 +1,11 @@
 package api
 
 import (
-	"Region-Simulator/config"
-	"Region-Simulator/internal/api/rest"
-	"Region-Simulator/internal/api/rest/handlers"
-	"Region-Simulator/internal/domain"
-	"Region-Simulator/internal/helper"
+	"ecommerce-app/config"
+	"ecommerce-app/internal/api/rest"
+	"ecommerce-app/internal/api/rest/handlers"
+	"ecommerce-app/internal/domain"
+	"ecommerce-app/internal/helper"
 	"log"
 	"os"
 

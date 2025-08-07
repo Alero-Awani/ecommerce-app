@@ -1,11 +1,12 @@
 package repository
 
 import (
-	"Region-Simulator/internal/domain"
+	"ecommerce-app/internal/domain"
 	"fmt"
+	"log"
+
 	"github.com/pkg/errors"
 	"gorm.io/gorm"
-	"log"
 )
 
 type CatalogRepository interface {

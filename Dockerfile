@@ -1,38 +1,38 @@
-# Use Go 1.23 bookworm as base image
-FROM golang:alpine AS builder
+# Use golang:alpine as base image for module caching
+FROM golang:alpine AS modules
 
-RUN apk update && \
-apk add git ca-certificates
+# Copy go files to a separate directory for module caching
+COPY go.mod go.sum /modules/
 
-# Move to working directory /app
-WORKDIR /app
+# Set the working directory
+WORKDIR /modules
 
-# Copy the go.mod and go.sum files to the /app directory
-COPY go.mod go.sum ./
-
-# Install dependencies
+# Install dependencies to cache them
 RUN go mod download
 
-# Copy the entire source code into the container
-COPY . .
+# Use golang:alpine as base image for building the application
+FROM golang:alpine AS builder
 
-# Build the application
-RUN CGO_ENABLED=0 GOOS=linux go build -o ecommerce
+#Copy the cached modules from the previous stage
+COPY --from=modules /go/pkg /go/pkg
 
-# Create a production stage to run the application binary
-FROM alpine:latest AS production
+# Copy source code to the builder stage
+COPY . /app
 
-# Install ca-certificates for HTTPS requests (if needed)
-RUN apk --no-cache add ca-certificates
+# Set the working directory
+WORKDIR /app
 
-# Move to working directory /prod
-WORKDIR /prod
+# Output binary is placed in /bin/app to separate it from the source code
+RUN mkdir -p /bin && \
+    CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
+    go build -o /bin/app ./cmd/app
 
-# Copy binary from builder stage
-COPY --from=builder /app ./
+# Use alpine as the final image and copy the built binary
+FROM alpine:latest
+COPY --from=builder /bin/app /app
 
-# Publish the port
+# Expose the port
 EXPOSE 9000
 
 # Start the application
-ENTRYPOINT ["./ecommerce"]
+ENTRYPOINT ["./app"]

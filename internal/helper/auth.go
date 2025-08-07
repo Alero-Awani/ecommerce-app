@@ -1,14 +1,15 @@
 package helper
 
 import (
-	"Region-Simulator/internal/domain"
+	"ecommerce-app/internal/domain"
 	"errors"
 	"fmt"
+	"strings"
+	"time"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v4"
 	"golang.org/x/crypto/bcrypt"
-	"strings"
-	"time"
 )
 
 type Auth struct {

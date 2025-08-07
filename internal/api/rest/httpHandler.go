@@ -1,8 +1,9 @@
 package rest
 
 import (
-	"Region-Simulator/config"
-	"Region-Simulator/internal/helper"
+	"ecommerce-app/config"
+	"ecommerce-app/internal/helper"
+
 	"github.com/gofiber/fiber/v2"
 	"gorm.io/gorm"
 )

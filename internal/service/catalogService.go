@@ -1,11 +1,12 @@
 package service
 
 import (
-	"Region-Simulator/config"
-	"Region-Simulator/internal/domain"
-	"Region-Simulator/internal/dto"
-	"Region-Simulator/internal/helper"
-	"Region-Simulator/internal/repository"
+	"ecommerce-app/config"
+	"ecommerce-app/internal/domain"
+	"ecommerce-app/internal/dto"
+	"ecommerce-app/internal/helper"
+	"ecommerce-app/internal/repository"
+
 	"github.com/pkg/errors"
 )
 

@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"Region-Simulator/internal/domain"
+	"ecommerce-app/internal/domain"
 	"errors"
 	"log"
 

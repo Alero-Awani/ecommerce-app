@@ -1,9 +1,10 @@
 package notification
 
 import (
-	"Region-Simulator/config"
+	"ecommerce-app/config"
 	"encoding/json"
 	"fmt"
+
 	"github.com/twilio/twilio-go"
 	twilioApi "github.com/twilio/twilio-go/rest/api/v2010"
 )

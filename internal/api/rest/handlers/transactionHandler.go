@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"Region-Simulator/internal/api/rest"
-	"Region-Simulator/internal/helper"
-	"Region-Simulator/internal/repository"
-	"Region-Simulator/internal/service"
+	"ecommerce-app/internal/api/rest"
+	"ecommerce-app/internal/helper"
+	"ecommerce-app/internal/repository"
+	"ecommerce-app/internal/service"
 
 	"github.com/gofiber/fiber/v2"
 	"gorm.io/gorm"

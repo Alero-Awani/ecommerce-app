@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"Region-Simulator/internal/domain"
-	"Region-Simulator/internal/dto"
+	"ecommerce-app/internal/domain"
+	"ecommerce-app/internal/dto"
 
 	"gorm.io/gorm"
 )

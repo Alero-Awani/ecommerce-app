@@ -1,12 +1,13 @@
 package handlers
 
 import (
-	"Region-Simulator/internal/api/rest"
-	"Region-Simulator/internal/dto"
-	"Region-Simulator/internal/repository"
-	"Region-Simulator/internal/service"
-	"github.com/gofiber/fiber/v2"
+	"ecommerce-app/internal/api/rest"
+	"ecommerce-app/internal/dto"
+	"ecommerce-app/internal/repository"
+	"ecommerce-app/internal/service"
 	"strconv"
+
+	"github.com/gofiber/fiber/v2"
 )
 
 type catalogHandler struct {

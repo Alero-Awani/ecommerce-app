@@ -1,10 +1,10 @@
 package service
 
 import (
-	"Region-Simulator/internal/domain"
-	"Region-Simulator/internal/dto"
-	"Region-Simulator/internal/helper"
-	"Region-Simulator/internal/repository"
+	"ecommerce-app/internal/domain"
+	"ecommerce-app/internal/dto"
+	"ecommerce-app/internal/helper"
+	"ecommerce-app/internal/repository"
 )
 
 type TransactionService struct {

@@ -1,0 +1,12 @@
+# IDE/Editor config
+frontend
+.git
+.gitignore
+.idea
+/internal/.DS_Store
+docker-compose.yml
+README.md
+
+#Environment variables
+.env
+
