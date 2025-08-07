@@ -104,17 +104,17 @@ Now you can access the application at `http://localhost:3000`.
 1. Authorize the docker client to push to ECR.
 
     ```sh
-    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <12324453>.dkr.ecr.us-east-1.amazonaws.com
+    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 12324453.dkr.ecr.us-east-1.amazonaws.com
     ```
 
 1. Tag the application.
 
     ```sh
-    docker tag golang-backend:0.1.0 <12324453>.dkr.ecr.us-east-1.amazonaws.com/ecommerce-backend
+    docker tag golang-backend:0.1.0 1232445.dkr.ecr.us-east-1.amazonaws.com/ecommerce-backend
     ```
 
 1. Push the image:
 
    ```sh
-   docker push <12324453>.dkr.ecr.us-east-1.amazonaws.com/ecommerce-backend:0.1.0
+   docker push 12324453.dkr.ecr.us-east-1.amazonaws.com/ecommerce-backend:0.1.0
    ```
